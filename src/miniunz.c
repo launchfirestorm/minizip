@@ -38,7 +38,6 @@
 #define FSEEKO_FUNC(stream, offset, origin) fseeko64(stream, offset, origin)
 #endif
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,6 +51,8 @@
 #else
 # include <unistd.h>
 # include <utime.h>
+# include <sys/stat.h>
+# include <sys/types.h>
 #endif
 
 
