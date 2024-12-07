@@ -34,7 +34,7 @@ endif()
 set(TARGET_HDR include)
 include_directories(${TARGET_HDR} include)
 
-add_library(minizip SHARED ${TARGET_SRC})
+add_library(minizip STATIC ${TARGET_SRC})
 target_include_directories(minizip PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include>  # <prefix>/include
